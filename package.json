@@ -17,15 +17,18 @@
     "test": "mocha"
   },
   "files": [
-    "app"
+    "app",
+    "environment",
+    "env"
   ],
   "keywords": [
     "yeoman-generator",
     "watson"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.17.0",
     "chalk": "^0.5.0",
+    "execSync": "^1.0.2",
+    "yeoman-generator": "^0.17.0",
     "yosay": "^0.3.0"
   },
   "devDependencies": {
