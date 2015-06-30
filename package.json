@@ -19,7 +19,8 @@
   "files": [
     "app",
     "environment",
-    "env"
+    "env",
+    "pattern"
   ],
   "keywords": [
     "yeoman-generator",
