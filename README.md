@@ -29,21 +29,19 @@ To install generator-watson from npm, run:
 npm install -g generator-watson
 ```
 
-### Available Generators
-
-The following are a list of available generators that are part of the Watson Generator and a description of what each does.
-
-#### Watson Environments
-
-Sets up one of the [Watson Development Environments](https://github.com/ibm-watson/environments) (but does not install the [system requirements](https://github.com/ibm-watson/environments#requirements)). Will create your `Vagrantfile` and, if `--skip-install` or `--skip-setup` isn't passed, will run `vagrant up` for you.
+Finally, initiate the generator:
 
 ```bash
-yo watson:environment
+yo Watson
 ```
 
-```bash
-yo watson:env
-```
+### Getting To Know Yeoman
+
+Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+
+If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+
+
 ## License
 
 MIT
