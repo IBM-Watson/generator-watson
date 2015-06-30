@@ -1,4 +1,4 @@
-# generator-watson [![Build Status](https://secure.travis-ci.org/Snugug/generator-watson.png?branch=master)](https://travis-ci.org/Snugug/generator-watson)
+# generator-watson [![Build Status](https://circleci.com/gh/IBM-Watson/generator-watson.svg?style=svg)](https://circleci.com/gh/IBM-Watson/generator-watson)
 
 > [Yeoman](http://yeoman.io) generator
 
