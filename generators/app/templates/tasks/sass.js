@@ -5,6 +5,7 @@
 //////////////////////////////
 var gutil = require('gulp-util'),
     sass = require('gulp-sass'),
+    ifElse = require('gulp-if-else'),
     autoprefixer = require('gulp-autoprefixer'),
     importOnce = require('node-sass-import-once'),
     browserSync = require('browser-sync'),
@@ -37,9 +38,13 @@ module.exports = function (gulp, SassPaths) {
   //////////////////////////////
   // Encapsulate task in function to choose path to work on
   //////////////////////////////
-  var SassTask = function (path) {
+  var SassTask = function (path, fail) {
     return gulp.src(SassPaths)
-      .pipe(sass(sassSettings).on('error', sass.logError))
+      .pipe(ifElse(fail === true, function () {
+        return sass(sassSettings);
+      }, function () {
+        return sass(sassSettings).on('error', sass.logError);
+      }))
       .pipe(autoprefixer({
         cascade: false
       }))
@@ -51,7 +56,7 @@ module.exports = function (gulp, SassPaths) {
   // Core Task
   //////////////////////////////
   gulp.task('sass', function () {
-    return SassTask(SassPaths);
+    return SassTask(SassPaths, true);
   });
 
   //////////////////////////////
@@ -70,7 +75,7 @@ module.exports = function (gulp, SassPaths) {
         gutil.log('File ' + gutil.colors.magenta(event.path.relative) + ' was ' + event.type);
 
         // Call the task
-        return SassTask(event.path.absolute);
+        return SassTask(event.path.absolute, false);
       });
   });
 }
