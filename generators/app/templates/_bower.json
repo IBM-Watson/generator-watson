@@ -1,0 +1,8 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.0",
+  "dependencies": {
+    "watson-design-guide": "^1.1.0"
+  }
+}
+
