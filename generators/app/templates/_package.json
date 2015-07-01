@@ -23,7 +23,8 @@
     "gulp-util": "^3.0.6",
     "gutil": "^1.6.4",
     "imagemin-pngquant": "^4.1.0",
-    "node-sass-import-once": "^1.2.0"
+    "node-sass-import-once": "^1.2.0",
+    "run-sequence": "^1.1.1"
   },
   "dependencies": {
     "bower": "^1.4.1"
