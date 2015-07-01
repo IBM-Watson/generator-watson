@@ -21,3 +21,9 @@ require('./tasks/deploy')(gulp);
 // ESLint Tasks
 //////////////////////////////
 require('./tasks/eslint')(gulp);
+
+
+//////////////////////////////
+// Uglify Tasks
+//////////////////////////////
+require('./tasks/uglify')(gulp);
