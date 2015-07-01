@@ -5,8 +5,7 @@
 //////////////////////////////
 var gutil = require('gulp-util'),
     eslint = require('gulp-eslint'),
-    ifElse = require('gulp-if-else'),
-    reload = browserSync.reload;
+    ifElse = require('gulp-if-else');
 
 //////////////////////////////
 // Internal Vars

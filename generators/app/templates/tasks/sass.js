@@ -8,8 +8,7 @@ var gutil = require('gulp-util'),
     ifElse = require('gulp-if-else'),
     autoprefixer = require('gulp-autoprefixer'),
     importOnce = require('node-sass-import-once'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+    browserSync = require('browser-sync');
 
 //////////////////////////////
 // Internal Vars
@@ -49,7 +48,7 @@ module.exports = function (gulp, SassPaths) {
         cascade: false
       }))
       .pipe(gulp.dest('./.www/css/'))
-      .pipe(reload({stream: true}));
+      .pipe(browserSync.stream());
   }
 
   //////////////////////////////

@@ -5,8 +5,7 @@
 //////////////////////////////
 var gutil = require('gulp-util'),
     uglify = require('gulp-uglify'),
-    browserSync = require('browser-sync'),
-    reload = browserSync.reload;
+    browserSync = require('browser-sync');
 
 //////////////////////////////
 // Internal Vars
@@ -34,7 +33,7 @@ module.exports = function (gulp, UglifyPaths) {
     return gulp.src(UglifyPaths)
       .pipe(uglify(settings))
       .pipe(gulp.dest('.www/js/'))
-      .pipe(reload({stream: true}));
+      .pipe(browserSync.stream());
   }
 
   //////////////////////////////
