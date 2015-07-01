@@ -45,3 +45,9 @@ require('./tasks/imagemin')(gulp);
 // Copy Tasks
 //////////////////////////////
 require('./tasks/copy')(gulp);
+
+
+//////////////////////////////
+// Clean Tasks
+//////////////////////////////
+require('./tasks/clean')(gulp);

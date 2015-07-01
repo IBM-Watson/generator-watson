@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.7.13",
+    "del": "^1.2.0",
     "eslint-plugin-nodeca": "^1.0.3",
     "fs-extra": "^0.20.1",
     "gulp": "^3.8.11",
