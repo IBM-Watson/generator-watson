@@ -69,3 +69,8 @@ require('./tasks/watch')(gulp);
 // Serve Tasks
 //////////////////////////////
 require('./tasks/serve')(gulp);
+
+//////////////////////////////
+// Default Task
+//////////////////////////////
+gulp.task('default', ['serve']);
