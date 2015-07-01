@@ -1,7 +1,8 @@
-# generator-watson [![Build Status](https://circleci.com/gh/IBM-Watson/generator-watson.svg?style=svg)](https://circleci.com/gh/IBM-Watson/generator-watson)
+# Generator Watson [![Build Status](https://circleci.com/gh/IBM-Watson/generator-watson.svg?style=svg)](https://circleci.com/gh/IBM-Watson/generator-watson)
 
 > [Yeoman](http://yeoman.io) generator
 
+The Watson Yeoman generator is a tool for getting quickly up and running with the [Watson Design Guide](http://watsondesign.guide/)
 
 ## Getting Started
 
@@ -9,7 +10,7 @@
 
 Trick question. It's not a thing. It's this guy:
 
-![](http://i.imgur.com/JHaAlBJ.png)
+![Yeoman](http://i.imgur.com/JHaAlBJ.png)
 
 Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
 
@@ -32,7 +33,7 @@ npm install -g generator-watson
 Finally, initiate the generator:
 
 ```bash
-yo Watson
+yo watson
 ```
 
 ### Getting To Know Yeoman
