@@ -33,3 +33,9 @@ require('./tasks/uglify')(gulp);
 // Browser Sync Tasks
 //////////////////////////////
 require('./tasks/browser-sync')(gulp);
+
+
+//////////////////////////////
+// Imagemin Tasks
+//////////////////////////////
+require('./tasks/imagemin')(gulp);
