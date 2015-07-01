@@ -28,7 +28,7 @@ describe('Watson:app', function () {
       'tasks/browser-sync.js',
       'tasks/copy.js',
       'tasks/imagemin.js',
-      'tasks/uglify.js',
+      'tasks/usemin.js',
       'tasks/build.js',
       'tasks/deploy.js',
       'tasks/sass.js',
