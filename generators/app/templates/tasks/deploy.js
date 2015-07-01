@@ -35,6 +35,9 @@ module.exports = function (gulp, DeployPaths) {
       // Build Everything
       'build',
 
+      // Minify Everything
+      'usemin',
+
       // Deploy Everything
       'gh-pages',
 

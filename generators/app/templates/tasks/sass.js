@@ -18,7 +18,7 @@ var toSass = [
 ];
 
 var sassSettings = {
-  'outputStyle': 'compressed',
+  'outputStyle': 'expanded',
   'importer': importOnce,
   'importOnce': {
     'index': true,
