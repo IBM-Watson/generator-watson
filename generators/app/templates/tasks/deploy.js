@@ -3,7 +3,7 @@
 //////////////////////////////
 // Requires
 //////////////////////////////
-var gutil = require('gulp-util'),
+var sequence = require('run-sequence'),
     ghPages = require('gulp-gh-pages');
 
 //////////////////////////////
@@ -23,10 +23,23 @@ module.exports = function (gulp, DeployPaths) {
   //////////////////////////////
   // Core Task
   //////////////////////////////
-  gulp.task('deploy', function () {
+  gulp.task('gh-pages', function () {
     return gulp.src(DeployPaths)
       .pipe(ghPages({
         'message': ':shipit: Update ' + new Date().toISOString()
       }));
+  });
+
+  gulp.task('deploy', function (cb) {
+    return sequence(
+      // Build Everything
+      'build',
+
+      // Deploy Everything
+      'gh-pages',
+
+      // Callback
+      cb
+    );
   });
 }
