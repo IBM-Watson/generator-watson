@@ -12,7 +12,6 @@ module.exports = function (gulp) {
     'eslint:watch',
     'copy:watch',
     'sass:watch',
-    'uglify:watch',
     'imagemin:watch'
   ]);
 }

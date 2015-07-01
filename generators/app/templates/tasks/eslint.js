@@ -5,7 +5,8 @@
 //////////////////////////////
 var gutil = require('gulp-util'),
     eslint = require('gulp-eslint'),
-    ifElse = require('gulp-if-else');
+    ifElse = require('gulp-if-else'),
+    browserSync = require('browser-sync');
 
 //////////////////////////////
 // Internal Vars
@@ -29,7 +30,9 @@ module.exports = function (gulp, EslintPaths) {
     return gulp.src(EslintPaths)
       .pipe(eslint())
       .pipe(eslint.format())
-      .pipe(ifElse(fail === true, eslint.failOnError));
+      .pipe(ifElse(fail === true, eslint.failOnError))
+      .pipe(gulp.dest('.www/js/'))
+      .pipe(browserSync.stream());
   }
 
   //////////////////////////////
