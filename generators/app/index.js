@@ -1,7 +1,8 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
+var yeoman = require('yeoman-generator'),
+    chalk = require('chalk'),
+    _s = require('underscore.string'),
+    yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
   prompting: function () {
@@ -13,10 +14,10 @@ module.exports = yeoman.generators.Base.extend({
     ));
 
     var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
+      type: 'string',
+      name: 'project',
+      message: 'What is your project\'s name?',
+      default: ''
     }];
 
     this.prompt(prompts, function (props) {
@@ -29,13 +30,19 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json')
+        this.destinationPath('package.json'),
+        {
+          'name': _s.slugify(this.props.project)
+        }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_bower.json'),
-        this.destinationPath('bower.json')
+        this.destinationPath('bower.json'),
+        {
+          'name': _s.slugify(this.props.project)
+        }
       );
     },
 
@@ -43,10 +50,6 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('editorconfig'),
         this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
       );
     }
   },
