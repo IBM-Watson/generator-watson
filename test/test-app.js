@@ -18,7 +18,8 @@ describe('Watson:app', function () {
     assert.file([
       'bower.json',
       'package.json',
-      '.editorconfig'
+      '.editorconfig',
+      'Gulpfile.js'
     ]);
   });
 
@@ -27,7 +28,9 @@ describe('Watson:app', function () {
                         '{' + '\n' +
                         '  "name": "hello-world",' + '\n' +
                         '  "version": "0.0.0",' + '\n' +
-                        '  "dependencies": {}' + '\n' +
+                        '  "dependencies": {' + '\n' +
+                        '    "watson-design-guide": "^1.1.0"' + '\n' +
+                        '  }' + '\n' +
                         '}');
   });
 
@@ -43,7 +46,7 @@ describe('Watson:app', function () {
                         '    "gulp": "./node_modules/gulp/bin/gulp.js"' + '\n' +
                         '  },' + '\n' +
                         '  "devDependencies": {' + '\n' +
-                        '    "gulp": "^3.8.11",' + '\n' +
+                        '    "gulp": "^3.8.11"' + '\n' +
                         '  },' + '\n' +
                         '  "dependencies": {' + '\n' +
                         '    "bower": "^1.4.1"' + '\n' +
