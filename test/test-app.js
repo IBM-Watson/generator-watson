@@ -2,6 +2,7 @@
 
 var path = require('path'),
     assert = require('yeoman-generator').assert,
+    chai = require('chai').assert,
     helpers = require('yeoman-generator').test,
     fs = require('fs'),
     os = require('os');
@@ -19,38 +20,36 @@ describe('Watson:app', function () {
       'bower.json',
       'package.json',
       '.editorconfig',
-      'Gulpfile.js'
+      'Gulpfile.js',
+      '.eslintrc',
+      '.gitignore',
+      'js/app.js',
+      'sass/style.scss',
+      'tasks/browser-sync.js',
+      'tasks/copy.js',
+      'tasks/imagemin.js',
+      'tasks/uglify.js',
+      'tasks/build.js',
+      'tasks/deploy.js',
+      'tasks/sass.js',
+      'tasks/watch.js',
+      'tasks/clean.js',
+      'tasks/eslint.js',
+      'tasks/serve.js',
+      'images/.gitkeep',
+      'audio/.gitkeep',
+      'videos/.gitkeep',
+      'fonts/.gitkeep'
     ]);
   });
 
-  it('templates bower.json', function () {
-    assert.fileContent('bower.json',
-                        '{' + '\n' +
-                        '  "name": "hello-world",' + '\n' +
-                        '  "version": "0.0.0",' + '\n' +
-                        '  "dependencies": {' + '\n' +
-                        '    "watson-design-guide": "^1.1.0"' + '\n' +
-                        '  }' + '\n' +
-                        '}');
-  });
 
-  it('templates package.json', function () {
-    assert.fileContent('package.json',
-                        '{' + '\n' +
-                        '  "name": "hello-world",' + '\n' +
-                        '  "version": "0.0.0",' + '\n' +
-                        '  "scripts": {' + '\n' +
-                        '    "postinstall": "npm run install:bower",' + '\n' +
-                        '    "install:bower": "npm run bower install",' + '\n' +
-                        '    "bower": "./node_modules/bower/bin/bower",' + '\n' +
-                        '    "gulp": "./node_modules/gulp/bin/gulp.js"' + '\n' +
-                        '  },' + '\n' +
-                        '  "devDependencies": {' + '\n' +
-                        '    "gulp": "^3.8.11"' + '\n' +
-                        '  },' + '\n' +
-                        '  "dependencies": {' + '\n' +
-                        '    "bower": "^1.4.1"' + '\n' +
-                        '  }' + '\n' +
-                        '}');
+  it('templates files', function () {
+    var bowerJSON = fs.readFileSync('bower.json', 'utf-8'),
+        packageJSON = fs.readFileSync('package.json', 'utf-8');
+
+
+    chai.include(bowerJSON, '"name": "hello-world",', 'Bower contains templated project string');
+    chai.include(packageJSON, '"name": "hello-world",', 'Package contains templated project string');
   });
 });

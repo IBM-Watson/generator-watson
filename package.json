@@ -27,6 +27,7 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
+    "chai": "^3.0.0",
     "mocha": "*"
   }
 }
