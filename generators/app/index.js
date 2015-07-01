@@ -105,6 +105,14 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('tasks/**'),
         this.destinationPath('tasks')
       );
+      // Index file
+      this.fs.copyTpl(
+        this.templatePath('_index.html'),
+        this.destinationPath('index.html'),
+        {
+          'name': this.props.project
+        }
+      );
       // JavaScript and Sass Files
       this.fs.copy(
         this.templatePath('js/**'),
