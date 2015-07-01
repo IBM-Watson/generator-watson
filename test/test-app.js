@@ -39,17 +39,20 @@ describe('Watson:app', function () {
       'images/.gitkeep',
       'audio/.gitkeep',
       'videos/.gitkeep',
-      'fonts/.gitkeep'
+      'fonts/.gitkeep',
+      'index.html'
     ]);
   });
 
 
   it('templates files', function () {
     var bowerJSON = fs.readFileSync('bower.json', 'utf-8'),
-        packageJSON = fs.readFileSync('package.json', 'utf-8');
+        packageJSON = fs.readFileSync('package.json', 'utf-8'),
+        indexHTML = fs.readFileSync('index.html', 'utf-8');
 
 
-    chai.include(bowerJSON, '"name": "hello-world",', 'Bower contains templated project string');
-    chai.include(packageJSON, '"name": "hello-world",', 'Package contains templated project string');
+    chai.include(bowerJSON, '"name": "hello-world",', '`bower.json` contains templated project slug');
+    chai.include(packageJSON, '"name": "hello-world",', '`package.json` contains templated project slug');
+    chai.include(indexHTML, '<title>Hello World</title>', '`index.html` contains templated project name ')
   });
 });
