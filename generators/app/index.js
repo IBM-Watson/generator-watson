@@ -92,6 +92,14 @@ module.exports = yeoman.generators.Base.extend({
     },
 
     projectfiles: function () {
+      var folders = [
+        'images',
+        'audio',
+        'videos',
+        'fonts'
+      ],
+        _this = this;
+
       // Gulp Tasks
       this.fs.copy(
         this.templatePath('tasks/**'),
@@ -106,23 +114,14 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('sass/**'),
         this.destinationPath('sass')
       );
+
       // Gitkeep Folders
-      this.fs.copy(
-        this.templatePath('gitkeep'),
-        this.destinationPath('images/.gitkeep')
-      );
-      this.fs.copy(
-        this.templatePath('gitkeep'),
-        this.destinationPath('audio/.gitkeep')
-      );
-      this.fs.copy(
-        this.templatePath('gitkeep'),
-        this.destinationPath('videos/.gitkeep')
-      );
-      this.fs.copy(
-        this.templatePath('gitkeep'),
-        this.destinationPath('fonts/.gitkeep')
-      );
+      folders.forEach(function (folder) {
+        _this.fs.copy(
+          _this.templatePath('gitkeep'),
+          _this.destinationPath(folder + '/.gitkeep')
+        );
+      });
     }
   },
 
