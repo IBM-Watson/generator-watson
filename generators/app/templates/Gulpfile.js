@@ -39,3 +39,9 @@ require('./tasks/browser-sync')(gulp);
 // Imagemin Tasks
 //////////////////////////////
 require('./tasks/imagemin')(gulp);
+
+
+//////////////////////////////
+// Copy Tasks
+//////////////////////////////
+require('./tasks/copy')(gulp);
