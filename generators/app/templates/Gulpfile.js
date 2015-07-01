@@ -27,3 +27,9 @@ require('./tasks/eslint')(gulp);
 // Uglify Tasks
 //////////////////////////////
 require('./tasks/uglify')(gulp);
+
+
+//////////////////////////////
+// Browser Sync Tasks
+//////////////////////////////
+require('./tasks/browser-sync')(gulp);
