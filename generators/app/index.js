@@ -50,6 +50,11 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: {
     app: function () {
+      // NVMRC
+      this.fs.copy(
+        this.templatePath('nvmrc'),
+        this.destinationPath('.nvmrc')
+      );
       // Package.json
       this.fs.copyTpl(
         this.templatePath('_package.json'),

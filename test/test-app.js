@@ -23,6 +23,7 @@ describe('Watson:app', function () {
       'Gulpfile.js',
       '.eslintrc',
       '.gitignore',
+      '.nvmrc',
       'js/app.js',
       'sass/style.scss',
       'tasks/browser-sync.js',
