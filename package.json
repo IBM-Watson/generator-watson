@@ -1,6 +1,6 @@
 {
   "name": "generator-watson",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
