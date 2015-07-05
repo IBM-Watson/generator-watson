@@ -25,23 +25,13 @@ describe('Watson:app', function () {
       '.gitignore',
       '.nvmrc',
       'js/app.js',
-      'sass/style.scss',
-      'tasks/browser-sync.js',
-      'tasks/copy.js',
-      'tasks/imagemin.js',
-      'tasks/usemin.js',
-      'tasks/build.js',
-      'tasks/deploy.js',
-      'tasks/sass.js',
-      'tasks/watch.js',
-      'tasks/clean.js',
-      'tasks/eslint.js',
-      'tasks/serve.js',
       'images/.gitkeep',
       'audio/.gitkeep',
       'videos/.gitkeep',
       'fonts/.gitkeep',
-      'index.html'
+      'templates/_layout.html',
+      'pages/index.html',
+      'pages/markdown.md'
     ]);
   });
 
@@ -49,11 +39,11 @@ describe('Watson:app', function () {
   it('templates files', function () {
     var bowerJSON = fs.readFileSync('bower.json', 'utf-8'),
         packageJSON = fs.readFileSync('package.json', 'utf-8'),
-        indexHTML = fs.readFileSync('index.html', 'utf-8');
+        indexHTML = fs.readFileSync('templates/_layout.html', 'utf-8');
 
 
     chai.include(bowerJSON, '"name": "hello-world",', '`bower.json` contains templated project slug');
     chai.include(packageJSON, '"name": "hello-world",', '`package.json` contains templated project slug');
-    chai.include(indexHTML, '<title>Hello World</title>', '`index.html` contains templated project name ')
+    chai.include(indexHTML, '<title>{% if title %}{{ title }} | {% endif %}Hello World</title>', '`index.html` contains templated project name ')
   });
 });
