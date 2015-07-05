@@ -1,4 +1,4 @@
-# Generator Watson [![Build Status](https://circleci.com/gh/IBM-Watson/generator-watson.svg?style=svg)](https://circleci.com/gh/IBM-Watson/generator-watson)
+# Generator Watson [![Build Status](https://circleci.com/gh/IBM-Watson/generator-watson.svg?style=svg)](https://circleci.com/gh/IBM-Watson/generator-watson) [![npm version](https://badge.fury.io/js/generator-watson.svg)](http://badge.fury.io/js/generator-watson)
 
 > [Yeoman](http://yeoman.io) generator
 
