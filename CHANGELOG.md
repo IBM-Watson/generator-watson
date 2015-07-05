@@ -1,6 +1,13 @@
 # Watson Yeoman Generator Changelog
 
-##v0.3.0
+## v1.0.0
+
+**Changes**
+
+* Removed `tasks` in favor of [Gulp Armadillo](https://github.com/Snugug/gulp-armadillo)
+* Move HTML to templates and pages
+
+## v0.3.0
 **July 1, 2015**
 
 **Additions**
