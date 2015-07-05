@@ -8,27 +8,8 @@
     "gulp": "./node_modules/gulp/bin/gulp.js"
   },
   "devDependencies": {
-    "browser-sync": "^2.7.13",
-    "del": "^1.2.0",
-    "eslint-plugin-nodeca": "^1.0.3",
-    "fs-extra": "^0.20.1",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-eslint": "^0.14.0",
-    "gulp-gh-pages": "^0.5.2",
-    "gulp-if-else": "^1.0.3",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-minify-css": "^1.2.0",
-    "gulp-minify-html": "^1.0.3",
-    "gulp-rev": "^5.0.1",
-    "gulp-sass": "^2.0.3",
-    "gulp-uglify": "^1.2.0",
-    "gulp-usemin": "^0.3.11",
-    "gulp-util": "^3.0.6",
-    "gutil": "^1.6.4",
-    "imagemin-pngquant": "^4.1.0",
-    "node-sass-import-once": "^1.2.0",
-    "run-sequence": "^1.1.1"
+    "gulp-armadillo": "^1.1.0",
+    "gulp": "^3.8.11"
   },
   "dependencies": {
     "bower": "^1.4.1"
