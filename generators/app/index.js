@@ -105,15 +105,15 @@ module.exports = yeoman.generators.Base.extend({
       ],
         _this = this;
 
-      // Gulp Tasks
+      // Starter pages
       this.fs.copy(
-        this.templatePath('tasks/**'),
-        this.destinationPath('tasks')
+        this.templatePath('pages/**'),
+        this.destinationPath('pages')
       );
       // Index file
       this.fs.copyTpl(
-        this.templatePath('_index.html'),
-        this.destinationPath('index.html'),
+        this.templatePath('_layout.html'),
+        this.destinationPath('templates/_layout.html'),
         {
           'name': this.props.project
         }
